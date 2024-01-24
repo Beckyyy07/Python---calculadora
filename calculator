@@ -1,0 +1,68 @@
+import math
+
+print('Digite a opção de operação matemática que deseja calcular')
+print('|+|-|*|/| \n deseja outras operações? Escolha uma opção: \n A - Raiz Quadrada \n B - Maior de 3 números \n C- Média entre 4 números \n D - Se você deseja sair')
+selecao = input()
+
+# Calcular Adição
+if selecao == '+':
+    print('Digite os números que você deseja somar')
+    opcao1 = float(input('Primeiro número:'))
+    opcao2 = float(input('Segundo número:'))
+    print('O resultado da soma é: ', opcao1 + opcao2)
+    print('________________________________________')
+
+# Calcular Subtração
+elif selecao == '-':
+    print('Digite os números que você deseja subtrair')
+    opcao1 = float(input('Primeiro número:'))
+    opcao2 = float(input('Segundo número:'))
+    print('O resultado da subtração é: ', opcao1 - opcao2)
+
+# Calcular Multiplicação
+elif selecao == '*':
+    print('Digite os números que você deseja multiplicar')
+    opcao1 = float(input('Primeiro número:'))
+    opcao2 = float(input('Segundo número:'))
+    print('O resultado da multiplicação é: ', opcao1 * opcao2)
+
+# Calcular Divisão
+elif selecao == '/':
+    print('Digite os números que você deseja dividir')
+    opcao1 = float(input('Primeiro número:'))
+    opcao2 = float(input('Segundo número:'))
+    print('O resultado da divisão é: ', opcao1 / opcao2)
+
+# Calcular Raiz Quadrada
+elif selecao == 'A':
+    print('Digite os números que você deseja calcular a Raiz Quadrada')
+    opcao1 = int(input())
+    raiz_Quad = math.sqrt(opcao1)
+    print(f'O resultado da raiz quadrada de {opcao1} é: {raiz_Quad}')
+
+# Calcular o Maior Número
+elif selecao == 'B':
+    print('Digite 3 números e veja qual o maior entre eles: ')
+    opcao1 = float(input('Primeiro número:'))
+    opcao2 = float(input('Segundo número:'))
+    opcao3 = float(input('Terceiro número:'))
+    lista = [opcao1, opcao2, opcao3]
+    print(f'O maior número da lista é: {max(lista)}')
+
+# Calcular Média Aritmética
+elif selecao == 'C':
+    print('Digite 4 números e veja qual é a média entre eles: ')
+    opcao1 = float(input('Primeiro número:'))
+    opcao2 = float(input('Segundo número:'))
+    opcao3 = float(input('Terceiro número:'))
+    opcao4 = float(input('Quarto número:'))
+    media = (opcao1 + opcao2 + opcao3 + opcao4) / 4
+    print(f'A média entre esses quatro valores é: {media}')
+
+
+#Opção se o usuário desejar sair do programa
+elif selecao == 'D':
+    print('Obrigado! Caso deseje calcular números, escolha uma opção de operação matemática.')
+
+else:
+    print(f'Essa opção escolhida por você: {selecao} não existe! Por favor, selecione alguma opção válida!')
